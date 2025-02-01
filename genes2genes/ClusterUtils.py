@@ -38,7 +38,7 @@ def compute_hamming_dist_matrix(set_of_strings):
     return E
 
 def run_agglomerative_clustering(E, gene_list, DIST_THRESHOLD, linkage = "average"):
-    model = sklearn.cluster.AgglomerativeClustering(n_clusters=None, affinity='precomputed', linkage=linkage, distance_threshold = DIST_THRESHOLD) 
+    model = sklearn.cluster.AgglomerativeClustering(n_clusters=None, metric='precomputed', linkage=linkage, distance_threshold = DIST_THRESHOLD) 
     model.fit(E)
     
     cluster_map = {}
