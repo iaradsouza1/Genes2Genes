@@ -5,10 +5,12 @@ channels:
 dependencies:
   - python=3.9
   - pip
-  pip: 
-    - cython==3.0.11
-    - leven==1.0.4
-    - ortools==9.10.4067
-    - optbinning==0.20.0
-    - scikit-learn==1.2
-    - git+https://github.com/Teichlab/Genes2Genes.git@main
+  - ipykernel # not required by the package, but included here because it has to be installed with the other packages requirements
+  - cython=3.0.11
+  - scikit-learn=1.2.0
+  - scanpy
+  - pip:
+      - leven==1.0.4
+      - ortools==9.10.4067
+      - optbinning==0.20.0
+      - git+https://github.com/Teichlab/Genes2Genes.git@main
